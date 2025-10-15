@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -61,
+      "left": -259.2,
+      "attrs": { "color": "green", "xray": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": -3.4,
+      "left": -259.2,
+      "attrs": { "color": "green", "xray": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn3",
+      "top": 63.8,
+      "left": -259.2,
+      "attrs": { "color": "green", "xray": "1" }
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": -160,
+      "left": 125.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -47.7,
+      "left": 244.2,
+      "attrs": { "temperature": "51.1", "humidity": "35" }
+    },
+    { "type": "wokwi-relay-module", "id": "relay1", "top": -172.6, "left": -201.6, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "ldr1:AO", "esp:34", "green", [ "h0" ] ],
+    [ "ldr1:VCC", "esp:3V3", "red", [ "h0" ] ],
+    [ "ldr1:GND", "esp:GND.2", "black", [ "h0" ] ],
+    [ "dht1:GND", "esp:GND.3", "black", [ "v0" ] ],
+    [ "dht1:SDA", "esp:15", "green", [ "v0" ] ],
+    [ "relay1:VCC", "esp:5V", "cyan", [ "h0" ] ],
+    [ "relay1:GND", "esp:GND.3", "black", [ "h0" ] ],
+    [ "relay1:IN", "esp:26", "green", [ "h211.2", "v-19.4", "h-19.2", "v57.6" ] ],
+    [ "dht1:VCC", "esp:3V3", "red", [ "v0" ] ],
+    [ "btn1:2.r", "esp:GND.1", "black", [ "h0" ] ],
+    [ "btn2:2.r", "esp:GND.1", "black", [ "h0" ] ],
+    [ "btn3:2.r", "esp:GND.1", "black", [ "h0" ] ],
+    [ "btn2:1.r", "esp:12", "green", [ "v0" ] ],
+    [ "btn1:1.r", "esp:13", "green", [ "v0" ] ],
+    [ "btn3:1.r", "esp:14", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
