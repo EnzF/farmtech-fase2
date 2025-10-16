@@ -98,9 +98,15 @@ void loop() {
 }
 
 ---
+## 📷 Circuito no Wokwi
+Adicione aqui o link e a imagem:
+- Link: (https://wokwi.com/projects/444837564605766657)
+- Imagem: (adicione o print em `wokwi/circuito.png`)
 
-## 📹 Demonstração em Vídeo
-Assista ao vídeo completo da simulação e explicação do projeto no YouTube (não listado):
+## 📹 Demonstração em vídeo
+Link para vídeo no YouTube (não listado): (https://youtu.be/Xn-lF_ZXwkg)
 
-🔗 [Clique aqui para assistir](https://youtu.be/Xn-lF_ZXwkg)
+## 👥 Equipe
+- **Enzo França Sader**
+- **Larissa**
 
